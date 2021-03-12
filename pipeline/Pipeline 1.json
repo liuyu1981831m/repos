@@ -1,0 +1,45 @@
+{
+	"name": "Pipeline 1",
+	"properties": {
+		"description": "df",
+		"activities": [
+			{
+				"name": "Notebook 1",
+				"type": "SynapseNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebook": {
+						"referenceName": "Notebook 1",
+						"type": "NotebookReference"
+					},
+					"parameters": {
+						"testParam": {
+							"value": {
+								"value": "@pipeline().parameters.testPipeParam",
+								"type": "Expression"
+							},
+							"type": "string"
+						}
+					}
+				}
+			}
+		],
+		"parameters": {
+			"testPipeParam": {
+				"type": "string",
+				"defaultValue": "pipeline"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2021-03-05T21:07:13Z"
+	},
+	"type": "Microsoft.Synapse/workspaces/pipelines"
+}

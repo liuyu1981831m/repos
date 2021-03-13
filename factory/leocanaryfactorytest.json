@@ -1,4 +1,12 @@
 {
 	"name": "leocanaryfactorytest",
+	"properties": {
+		"globalParameters": {
+			"test4": {
+				"type": "string",
+				"value": "test4"
+			}
+		}
+	},
 	"location": "eastus2euap"
 }

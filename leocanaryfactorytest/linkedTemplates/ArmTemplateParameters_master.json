@@ -1,0 +1,43 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "leocanaryfactorytest"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://leocanarytestgen2.dfs.core.windows.net"
+		},
+		"AzureDataLakeStorage1_properties_privateLinkResourceId": {
+			"value": "/subscriptions/d3bb3b2e-9a7e-4194-9960-5171bd192117/resourceGroups/leorg/providers/Microsoft.Storage/storageAccounts/leocanarytestgen2"
+		},
+		"AzureDataLakeStorage1_properties_groupId": {
+			"value": "dfs"
+		},
+		"AzureDataLakeStorage1_properties_fqdns": {
+			"value": [
+				"leocanarytestgen2.dfs.core.windows.net"
+			]
+		},
+		"PrivateLinkService1_properties_privateLinkResourceId": {
+			"value": "/subscriptions/1e42591f-1f0c-4c5a-b7f2-a268f6105ec5/resourceGroups/leorg/providers/Microsoft.Network/privateLinkServices/leopls"
+		},
+		"PrivateLinkService1_properties_groupId": {
+			"value": ""
+		},
+		"PrivateLinkService1_properties_fqdns": {
+			"value": [
+				"https://swissnorthproddataflowrunnerdep3.dev.azuresynapse.net"
+			]
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}

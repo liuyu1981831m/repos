@@ -1,0 +1,16 @@
+{
+	"name": "AzureMySql1",
+	"type": "Microsoft.Synapse/workspaces/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureMySql",
+		"typeProperties": {
+			"connectionString": "server=adfdataflowtestmysql.mysql.database.azure.com;port=3306;database=information_schema;uid=aafgaf;sslmode=1;usesystemtruststore=0",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIlNZTkFQU0VAQzZCREI3N0YtNzhDRC00RTFCLUFERTUtNjZFRkZBNDgyM0NDX2YxNDA3ODI1LTUxNmUtNDU5MS1iNzAxLTI0ZjA1YjE5YzA3ZSINCn0="
+		},
+		"connectVia": {
+			"referenceName": "AutoResolveIntegrationRuntime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

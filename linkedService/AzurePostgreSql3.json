@@ -5,14 +5,15 @@
 		"annotations": [],
 		"type": "AzurePostgreSql",
 		"typeProperties": {
-			"connectionString": "Host=adfdataflowserver.postgres.database.azure.com;Port=5432;Database= postgres withspace ;UID=test;EncryptionMethod=0",
+			"connectionString": "Host=adfdataflowserver.postgres.database.azure.com;Port=5432;Database=teset;UID=test;EncryptionMethod=0",
 			"password": {
 				"type": "AzureKeyVaultSecret",
 				"store": {
 					"referenceName": "AzureKeyVault1",
 					"type": "LinkedServiceReference"
 				},
-				"secretName": "cmk1"
+				"secretName": "cmk1",
+				"secretVersion": "Select..."
 			}
 		},
 		"connectVia": {

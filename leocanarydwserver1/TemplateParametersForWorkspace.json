@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"value": "leocanarydwserver1"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureMySql1_connectionString": {
+			"value": ""
+		},
+		"AzurePostgreSql1_connectionString": {
+			"value": ""
+		},
+		"PostgreSql1_connectionString": {
+			"value": ""
+		},
+		"leocanarydwserver1-WorkspaceDefaultSqlServer_connectionString": {
+			"value": ""
+		},
+		"AzurePostgreSql2_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://leoblob.dfs.core.windows.net"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://CMKLeo.vault.azure.net/"
+		},
+		"leocanarydwserver1-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://leocanarydwserver1gen2.dfs.core.windows.net"
+		}
+	}
+}

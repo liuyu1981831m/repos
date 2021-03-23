@@ -1,5 +1,5 @@
 {
-	"name": "AutoResolveIntegrationRuntime",
+	"name": "DataflowIR",
 	"properties": {
 		"type": "Managed",
 		"typeProperties": {

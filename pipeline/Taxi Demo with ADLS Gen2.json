@@ -1,0 +1,34 @@
+{
+	"name": "Taxi Demo with ADLS Gen2",
+	"properties": {
+		"activities": [
+			{
+				"name": "Taxi Demo",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "Taxi Demo with ADLS",
+						"type": "DataFlowReference"
+					},
+					"integrationRuntime": {
+						"referenceName": "DataflowIR",
+						"type": "IntegrationRuntimeReference"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2020-06-10T21:51:16Z"
+	},
+	"type": "Microsoft.Synapse/workspaces/pipelines"
+}

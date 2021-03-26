@@ -19,9 +19,9 @@
 						"referenceName": "Taxi Demo with ADLS",
 						"type": "DataFlowReference"
 					},
-					"integrationRuntime": {
-						"referenceName": "DataflowIR",
-						"type": "IntegrationRuntimeReference"
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
 					},
 					"traceLevel": "Fine"
 				}

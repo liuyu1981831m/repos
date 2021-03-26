@@ -1,13 +1,6 @@
 {
 	"name": "VendorStatsDwMSI",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "wsnightly-WorkspaceDefaultSqlServer",
-			"type": "LinkedServiceReference",
-			"parameters": {
-				"DBName": "sql"
-			}
-		},
 		"annotations": [],
 		"type": "AzureSqlDWTable",
 		"schema": [],

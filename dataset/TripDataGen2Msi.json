@@ -1,10 +1,6 @@
 {
 	"name": "TripDataGen2Msi",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "wsnightly-WorkspaceDefaultStorage",
-			"type": "LinkedServiceReference"
-		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {

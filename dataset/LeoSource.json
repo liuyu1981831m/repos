@@ -11,7 +11,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": "trip_data_1.csv",
-				"fileSystem": "filesystem"
+				"fileSystem": "mycontainer"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",

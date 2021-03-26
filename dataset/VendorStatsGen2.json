@@ -1,10 +1,6 @@
 {
 	"name": "VendorStatsGen2",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "wsnightly-WorkspaceDefaultStorage",
-			"type": "LinkedServiceReference"
-		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {

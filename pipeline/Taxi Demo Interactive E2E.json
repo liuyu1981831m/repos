@@ -4,6 +4,7 @@
 		"activities": [
 			{
 				"name": "Create Dataflow Debug session",
+				"description": " ",
 				"type": "WebActivity",
 				"dependsOn": [],
 				"policy": {
@@ -16,6 +17,10 @@
 				"userProperties": [],
 				"typeProperties": {
 					"url": "https://ajayseasia.dev.azuresynapse.net/createDataflowDebugSession?api-version=2018-06-01",
+					"connectVia": {
+						"referenceName": "AutoResolveIntegrationRuntime",
+						"type": "IntegrationRuntimeReference"
+					},
 					"method": "POST",
 					"body": {
 						"dataFlowName": "globaldataflowsession",

@@ -4,6 +4,7 @@
 		"activities": [
 			{
 				"name": "Notebook1",
+				"description": " ",
 				"type": "SynapseNotebook",
 				"dependsOn": [],
 				"policy": {

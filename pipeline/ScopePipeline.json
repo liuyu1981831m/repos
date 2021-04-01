@@ -4,6 +4,7 @@
 		"activities": [
 			{
 				"name": "SCOPE job definition1",
+				"description": "dfasdasdasd",
 				"type": "ScopeJob",
 				"dependsOn": [],
 				"policy": {

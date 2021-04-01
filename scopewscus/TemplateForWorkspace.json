@@ -133,6 +133,39 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('workspaceName'), '/ScopePipeline')]",
+			"type": "Microsoft.Synapse/workspaces/pipelines",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"activities": [
+					{
+						"name": "SCOPE job definition1",
+						"description": "dfasdasdasd",
+						"type": "ScopeJob",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"scopeJob": {
+								"referenceName": "SCOPE job definition 2",
+								"type": "ScopeJobDefinitionReference"
+							}
+						}
+					}
+				],
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('workspaceId'), '/scopeJobDefinitions/SCOPE job definition 2')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('workspaceName'), '/Taxi Demo Interactive E2E')]",
 			"type": "Microsoft.Synapse/workspaces/pipelines",
 			"apiVersion": "2019-06-01-preview",
@@ -1710,6 +1743,25 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('workspaceName'), '/SCOPE job definition 2')]",
+			"type": "Microsoft.Synapse/workspaces/scopeJobDefinitions",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"targetScopePool": {
+					"referenceName": "scope",
+					"type": "ScopePoolReference"
+				},
+				"jobProperties": {
+					"name": "SCOPE job definition 2",
+					"scriptPath": "abfss://scope@scopeuserwestcentralus.dfs.core.windows.net/SampleScope.script",
+					"runtimeName": "",
+					"priority": 1000,
+					"maxUnavailability": 100
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('workspaceName'), '/default')]",
 			"type": "Microsoft.Synapse/workspaces/managedVirtualNetworks",
 			"apiVersion": "2019-06-01-preview",
@@ -1746,58 +1798,6 @@
 			},
 			"dependsOn": [
 				"[concat(variables('workspaceId'), '/managedVirtualNetworks/default')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('workspaceName'), '/SCOPE job definition 2')]",
-			"type": "Microsoft.Synapse/workspaces/scopeJobDefinitions",
-			"apiVersion": "2019-06-01-preview",
-			"properties": {
-				"targetScopePool": {
-					"referenceName": "scope",
-					"type": "ScopePoolReference"
-				},
-				"jobProperties": {
-					"name": "SCOPE job definition 2",
-					"scriptPath": "abfss://scope@scopeuserwestcentralus.dfs.core.windows.net/SampleScope.script",
-					"conf": {},
-					"runtimeName": "",
-					"priority": 1000,
-					"maxUnavailability": 100
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('workspaceName'), '/ScopePipeline')]",
-			"type": "Microsoft.Synapse/workspaces/pipelines",
-			"apiVersion": "2019-06-01-preview",
-			"properties": {
-				"activities": [
-					{
-						"name": "SCOPE job definition1",
-						"type": "ScopeJob",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "7.00:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"scopeJob": {
-								"referenceName": "SCOPE job definition 2",
-								"type": "ScopeJobDefinitionReference"
-							}
-						}
-					}
-				],
-				"annotations": []
-			},
-			"dependsOn": [
-				"[concat(variables('workspaceId'), '/scopeJobDefinitions/SCOPE job definition 2')]"
 			]
 		}
 	]

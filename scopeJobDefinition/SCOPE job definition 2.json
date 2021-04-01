@@ -1,0 +1,16 @@
+{
+	"name": "SCOPE job definition 2",
+	"properties": {
+		"targetScopePool": {
+			"referenceName": "scope",
+			"type": "ScopePoolReference"
+		},
+		"jobProperties": {
+			"name": "SCOPE job definition 2",
+			"scriptPath": "abfss://scope@scopeuserwestcentralus.dfs.core.windows.net/SampleScope.script",
+			"runtimeName": "",
+			"priority": 1000,
+			"maxUnavailability": 100
+		}
+	}
+}

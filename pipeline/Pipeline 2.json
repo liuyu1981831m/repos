@@ -3,9 +3,8 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Notebook1",
-				"description": " ",
-				"type": "SynapseNotebook",
+				"name": "SCOPE job definition1",
+				"type": "ScopeJob",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "7.00:00:00",
@@ -16,13 +15,15 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebook": {
-						"referenceName": "Notebook 2",
-						"type": "NotebookReference"
+					"scopeJob": {
+						"referenceName": "SCOPE job definition 1",
+						"type": "ScopeJobDefinitionReference"
 					}
 				}
 			}
 		],
-		"annotations": []
-	}
+		"annotations": [],
+		"lastPublishTime": "2021-04-01T20:04:12Z"
+	},
+	"type": "Microsoft.Synapse/workspaces/pipelines"
 }

@@ -1,10 +1,11 @@
 {
 	"name": "Pipeline 1",
 	"properties": {
+		"description": "test",
 		"activities": [
 			{
-				"name": "Data flow1",
-				"type": "ExecuteDataFlow",
+				"name": "SCOPE job definition1",
+				"type": "ScopeJob",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "7.00:00:00",
@@ -15,18 +16,15 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"dataflow": {
-						"referenceName": "dataflow1",
-						"type": "DataFlowReference"
-					},
-					"compute": {
-						"coreCount": 8,
-						"computeType": "General"
-					},
-					"traceLevel": "Fine"
+					"scopeJob": {
+						"referenceName": "SCOPE job definition 1",
+						"type": "ScopeJobDefinitionReference"
+					}
 				}
 			}
 		],
-		"annotations": []
-	}
+		"annotations": [],
+		"lastPublishTime": "2021-03-29T17:39:49Z"
+	},
+	"type": "Microsoft.Synapse/workspaces/pipelines"
 }

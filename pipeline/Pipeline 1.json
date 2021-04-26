@@ -4,8 +4,8 @@
 		"description": "test",
 		"activities": [
 			{
-				"name": "SCOPE job definition1",
-				"type": "ScopeJob",
+				"name": "Spark job definition1",
+				"type": "SparkJob",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "7.00:00:00",
@@ -14,13 +14,7 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [],
-				"typeProperties": {
-					"scopeJob": {
-						"referenceName": "SCOPE job definition 1",
-						"type": "ScopeJobDefinitionReference"
-					}
-				}
+				"userProperties": []
 			}
 		],
 		"annotations": [],

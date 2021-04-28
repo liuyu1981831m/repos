@@ -3,8 +3,8 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "SCOPE job definition1",
-				"type": "ScopeJob",
+				"name": "Spark job definition1",
+				"type": "SparkJob",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "7.00:00:00",
@@ -15,10 +15,9 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"scopeJob": {
-						"referenceName": "SCOPE job definition 1",
-						"type": "ScopeJobDefinitionReference"
-					}
+					"args": [
+						"123"
+					]
 				}
 			}
 		],

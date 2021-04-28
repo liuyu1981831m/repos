@@ -19,7 +19,18 @@
 					"scopeJob": {
 						"referenceName": "SCOPE job definition 2",
 						"type": "ScopeJobDefinitionReference"
-					}
+					},
+					"scriptParameters": {
+						"p1": "1",
+						"p2": "2"
+					},
+					"priority": "100",
+					"maxUnavailability": "50",
+					"tags": {
+						"a": "xx",
+						"b": "yy"
+					},
+					"nebulaArguments": "test"
 				}
 			}
 		],

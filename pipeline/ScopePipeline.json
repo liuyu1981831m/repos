@@ -22,15 +22,23 @@
 					},
 					"scriptParameters": {
 						"p1": "1",
-						"p2": "2"
+						"p2": "2",
+						"p3": {
+							"value": "@pipeline().Pipeline",
+							"type": "Expression"
+						}
 					},
-					"priority": "100",
-					"maxUnavailability": "50",
+					"priority": "10",
+					"maxUnavailability": "70",
 					"tags": {
 						"a": "xx",
-						"b": "yy"
+						"b": "yy",
+						"c": {
+							"value": "@pipeline().GroupId",
+							"type": "Expression"
+						}
 					},
-					"nebulaArguments": "test"
+					"nebulaArguments": "hello"
 				}
 			}
 		],

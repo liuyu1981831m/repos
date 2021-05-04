@@ -19,6 +19,11 @@
 					"notebook": {
 						"referenceName": "Notebook 2",
 						"type": "NotebookReference"
+					},
+					"parameters": {
+						"p1": {
+							"value": "aa"
+						}
 					}
 				}
 			}

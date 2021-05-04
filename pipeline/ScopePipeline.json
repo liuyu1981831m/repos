@@ -21,9 +21,8 @@
 						"type": "ScopeJobDefinitionReference"
 					},
 					"scriptParameters": {
-						"p1": "1",
-						"p2": "2",
-						"p3": {
+						"p1": "v1",
+						"p2": {
 							"value": "@pipeline().Pipeline",
 							"type": "Expression"
 						}
@@ -31,14 +30,13 @@
 					"priority": "10",
 					"maxUnavailability": "70",
 					"tags": {
-						"a": "xx",
-						"b": "yy",
-						"c": {
-							"value": "@pipeline().GroupId",
+						"a1": "x1",
+						"a2": {
+							"value": "@pipeline().RunId",
 							"type": "Expression"
 						}
 					},
-					"nebulaArguments": "hello"
+					"nebulaArguments": "test"
 				}
 			}
 		],

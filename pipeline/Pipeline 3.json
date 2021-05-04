@@ -17,7 +17,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"notebook": {
-						"referenceName": "Notebook 2",
+						"referenceName": "Notebook 1",
 						"type": "NotebookReference"
 					},
 					"parameters": {

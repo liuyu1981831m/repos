@@ -1,0 +1,10 @@
+{
+	"name": "synapse-ws-sql--leocanaryvnet",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/0ee78edb-a0ad-456c-a0a2-901bf542c102/resourceGroups/leorg/providers/Microsoft.Synapse/workspaces/leocanaryvnet",
+		"groupId": "sql",
+		"fqdns": [
+			"leocanaryvnet.sql.azuresynapse.net"
+		]
+	}
+}

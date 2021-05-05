@@ -1,0 +1,38 @@
+{
+	"name": "WordCount_DotNet",
+	"properties": {
+		"targetBigDataPool": {
+			"referenceName": "leo",
+			"type": "BigDataPoolReference"
+		},
+		"requiredSparkVersion": "2.4",
+		"language": "csharp",
+		"jobProperties": {
+			"name": "WordCount_DotNet",
+			"file": "local:///usr/hdp/current/spark2-client/jars/microsoft-spark.jar",
+			"className": "org.apache.spark.deploy.dotnet.DotnetRunner",
+			"conf": {
+				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.minExecutors": "2",
+				"spark.dynamicAllocation.maxExecutors": "2",
+				"spark.yarn.appMasterEnv.DOTNET_ASSEMBLY_SEARCH_PATHS": "./udfs"
+			},
+			"args": [
+				"abfss://filesystem@leosynapsecanaryvnet.dfs.core.windows.net/synapse/workspaces/leocanaryvnet/batchjobs/WordCount_DotNet/wordcount.zip",
+				"WordCount",
+				"abfss://filesystem@leosynapsecanaryvnet.dfs.core.windows.net/shakespeare.txt",
+				"abfss://filesystem@leosynapsecanaryvnet.dfs.core.windows.net/result"
+			],
+			"jars": [],
+			"files": [],
+			"archives": [
+				"abfss://filesystem@leosynapsecanaryvnet.dfs.core.windows.net/synapse/workspaces/leocanaryvnet/batchjobs/WordCount_DotNet/wordcount.zip#udfs"
+			],
+			"driverMemory": "56g",
+			"driverCores": 8,
+			"executorMemory": "56g",
+			"executorCores": 8,
+			"numExecutors": 2
+		}
+	}
+}

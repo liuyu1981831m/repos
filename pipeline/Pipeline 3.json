@@ -3,9 +3,8 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Notebook1",
-				"description": " ",
-				"type": "SynapseNotebook",
+				"name": "Spark job definition1",
+				"type": "SparkJob",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "7.00:00:00",
@@ -16,14 +15,9 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebook": {
-						"referenceName": "Notebook 1",
-						"type": "NotebookReference"
-					},
-					"parameters": {
-						"p1": {
-							"value": "aa"
-						}
+					"sparkJob": {
+						"referenceName": "WordCount_DotNet",
+						"type": "SparkJobDefinitionReference"
 					}
 				}
 			}

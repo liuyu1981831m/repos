@@ -27,7 +27,7 @@
 							"type": "Expression"
 						}
 					},
-					"priority": "10",
+					"priority": "20",
 					"maxUnavailability": "70",
 					"tags": {
 						"a1": "x1",

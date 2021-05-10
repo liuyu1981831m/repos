@@ -7,7 +7,7 @@
 		},
 		"jobProperties": {
 			"name": "SCOPE job definition with Params",
-			"scriptPath": "abfss://scope@scopeuserwestcentralus.dfs.core.windows.net/synapse/workspaces/scopewscus/batchjobs/SCOPE%20job%20definition%202/SCOPEWithParams.script",
+			"scriptPath": "abfss://scope@scopeuserwestcentralus.dfs.core.windows.net/synapse/workspaces/scopewscus/batchjobs/SCOPE%20job%20definition%20with%20Params/SCOPEWithParams.script",
 			"runtimeName": "",
 			"priority": 1000,
 			"maxUnavailability": 100

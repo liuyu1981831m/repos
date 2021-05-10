@@ -1,0 +1,15 @@
+{
+	"name": "SCOPE job definition with params",
+	"properties": {
+		"targetScopePool": {
+			"type": "ScopePoolReference"
+		},
+		"jobProperties": {
+			"name": "SCOPE job definition with params",
+			"scriptPath": "abfss://scope@scopeuserwestcentralus.dfs.core.windows.net/synapse/workspaces/scopewscus/batchjobs/SCOPE%20job%20definition%20with%20params/SCOPEWithParams.script",
+			"runtimeName": "",
+			"priority": 1000,
+			"maxUnavailability": 100
+		}
+	}
+}

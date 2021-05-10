@@ -1464,25 +1464,6 @@
 				"jobProperties": {
 					"name": "SCOPE job definition 1",
 					"scriptPath": "abfss://scope@scopeuserwestcentralus.dfs.core.windows.net/SampleScope.script",
-					"runtimeName": "",
-					"priority": 1000,
-					"maxUnavailability": 100
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('workspaceName'), '/SCOPE job definition 3')]",
-			"type": "Microsoft.Synapse/workspaces/scopeJobDefinitions",
-			"apiVersion": "2019-06-01-preview",
-			"properties": {
-				"targetScopePool": {
-					"referenceName": "scope",
-					"type": "ScopePoolReference"
-				},
-				"jobProperties": {
-					"name": "SCOPE job definition 3",
-					"scriptPath": "abfss://scope@scopeuserwestcentralus.dfs.core.windows.net/SampleScope.script",
 					"conf": {},
 					"runtimeName": "",
 					"priority": 1000,

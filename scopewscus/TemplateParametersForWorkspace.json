@@ -11,6 +11,9 @@
 		"AzureSynapseAnalytics1_connectionString": {
 			"value": ""
 		},
+		"CosmosDb1_connectionString": {
+			"value": ""
+		},
 		"scopewscus-WorkspaceDefaultSqlServer_connectionString": {
 			"value": ""
 		},

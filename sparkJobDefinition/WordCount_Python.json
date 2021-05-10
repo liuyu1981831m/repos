@@ -2,10 +2,8 @@
 	"name": "WordCount_Python",
 	"properties": {
 		"targetBigDataPool": {
-			"referenceName": "leo",
 			"type": "BigDataPoolReference"
 		},
-		"requiredSparkVersion": "2.4",
 		"language": "python",
 		"jobProperties": {
 			"name": "WordCount_Python",
@@ -20,10 +18,6 @@
 			],
 			"jars": [],
 			"files": [],
-			"driverMemory": "28g",
-			"driverCores": 4,
-			"executorMemory": "28g",
-			"executorCores": 4,
 			"numExecutors": 2
 		}
 	}

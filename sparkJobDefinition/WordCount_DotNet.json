@@ -2,10 +2,8 @@
 	"name": "WordCount_DotNet",
 	"properties": {
 		"targetBigDataPool": {
-			"referenceName": "leo",
 			"type": "BigDataPoolReference"
 		},
-		"requiredSparkVersion": "2.4",
 		"language": "csharp",
 		"jobProperties": {
 			"name": "WordCount_DotNet",
@@ -28,10 +26,6 @@
 			"archives": [
 				"abfss://filesystem@leosynapsecanaryvnet.dfs.core.windows.net/synapse/workspaces/leocanaryvnet/batchjobs/WordCount_DotNet/wordcount.zip#udfs"
 			],
-			"driverMemory": "56g",
-			"driverCores": 8,
-			"executorMemory": "56g",
-			"executorCores": 8,
 			"numExecutors": 2
 		}
 	}

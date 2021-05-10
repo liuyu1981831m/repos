@@ -1,10 +1,10 @@
 {
-	"name": "SparkPipeline",
+	"name": "Pipeline 1",
 	"properties": {
 		"activities": [
 			{
-				"name": "Spark job definition1",
-				"type": "SparkJob",
+				"name": "SCOPE job definition1",
+				"type": "ScopeJob",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "7.00:00:00",
@@ -15,9 +15,9 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"sparkJob": {
-						"referenceName": "WordCount_DotNet",
-						"type": "SparkJobDefinitionReference"
+					"scopeJob": {
+						"referenceName": "SCOPE job definition with Params",
+						"type": "ScopeJobDefinitionReference"
 					}
 				}
 			}

@@ -1,5 +1,5 @@
 {
-	"name": "Pipeline 1",
+	"name": "ScopeWithParamsPipeline",
 	"properties": {
 		"activities": [
 			{
@@ -18,6 +18,10 @@
 					"scopeJob": {
 						"referenceName": "SCOPE job definition with Params",
 						"type": "ScopeJobDefinitionReference"
+					},
+					"scriptParameters": {
+						"inputStream": "abfss://scope@scopeuserwestcentralus.dfs.core.windows.net/users/v-hozhao/All_In_One/Input/SearchLog.txt",
+						"OutputStream": "abfss://scope@scopeuserwestcentralus.dfs.core.windows.net/users/v-hozhao/All_In_One/Output/Sample_Output.txt"
 					}
 				}
 			}

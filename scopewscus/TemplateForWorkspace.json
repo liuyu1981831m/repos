@@ -62,7 +62,7 @@
 							"scriptParameters": {
 								"InputStream": "abfss://scope@scopeuserwestcentralus.dfs.core.windows.net/synapse/workspaces/scopewscus/batchjobs/SCOPE%20job%20definition%20with%20params/SearchLog.txt",
 								"OutputStream": {
-									"value": "@concat('abfss://scopescopeuserwestcentralus.dfs.core.windows.net/synapse/workspaces/scopewscus/batchjobs/SCOPE%20job%20definition%20with%20params/', pipeline().RunId, '/Sample_Output.txt')",
+									"value": "@concat('abfss://scope@scopeuserwestcentralus.dfs.core.windows.net/synapse/workspaces/scopewscus/batchjobs/SCOPE%20job%20definition%20with%20params/', pipeline().RunId , '/Sample_Output.txt')",
 									"type": "Expression"
 								}
 							}

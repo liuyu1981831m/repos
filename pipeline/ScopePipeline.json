@@ -17,7 +17,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"scopeJob": {
-						"referenceName": "SCOPE job definition 2",
+						"referenceName": "SCOPE job definition with Params",
 						"type": "ScopeJobDefinitionReference"
 					},
 					"scriptParameters": {

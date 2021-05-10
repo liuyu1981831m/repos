@@ -2,6 +2,7 @@
 	"name": "SCOPE job definition with params",
 	"properties": {
 		"targetScopePool": {
+			"referenceName": "scope",
 			"type": "ScopePoolReference"
 		},
 		"jobProperties": {

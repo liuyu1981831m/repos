@@ -20,8 +20,8 @@
 						"type": "ScopeJobDefinitionReference"
 					},
 					"scriptParameters": {
-						"inputStream": "abfss://scope@scopeuserwestcentralus.dfs.core.windows.net/users/v-hozhao/All_In_One/Input/SearchLog.txt",
-						"OutputStream": "abfss://scope@scopeuserwestcentralus.dfs.core.windows.net/users/v-hozhao/All_In_One/Output/Sample_Output.txt"
+						"InputStream": "abfss://scope@scopeuserwestcentralus.dfs.core.windows.net/synapse/workspaces/scopewscus/batchjobs/SCOPE%20job%20definition%20with%20Params/SearchLog.txt",
+						"OutputStream": "abfss://scope@scopeuserwestcentralus.dfs.core.windows.net/synapse/workspaces/scopewscus/batchjobs/SCOPE%20job%20definition%20with%20Params/SCOPEWithParams.script/Sample_Output.txt"
 					}
 				}
 			}

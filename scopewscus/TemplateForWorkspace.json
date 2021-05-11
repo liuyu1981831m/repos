@@ -65,6 +65,18 @@
 									"value": "@concat('abfss://scope@scopeuserwestcentralus.dfs.core.windows.net/synapse/workspaces/scopewscus/batchjobs/SCOPE%20job%20definition%20with%20params/', pipeline().RunId , '/Sample_Output.txt')",
 									"type": "Expression"
 								}
+							},
+							"priority": {
+								"value": "@add(20,30)",
+								"type": "Expression"
+							},
+							"maxUnavailability": {
+								"value": "@rand(1,100)",
+								"type": "Expression"
+							},
+							"nebulaArguments": {
+								"value": "@pipeline().RunId",
+								"type": "Expression"
 							}
 						}
 					}

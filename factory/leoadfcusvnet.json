@@ -1,0 +1,9 @@
+{
+	"name": "leoadfcusvnet",
+	"location": "centralus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "9ce74299-5dbd-478e-a026-5c2220367cd8",
+		"tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+	}
+}

@@ -27,12 +27,14 @@
 						}
 					},
 					"sink": {
-						"type": "SqlDWSink",
-						"allowPolyBase": true,
-						"polyBaseSettings": {
-							"rejectValue": 0,
-							"rejectType": "value",
-							"useTypeDefault": true
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
 						}
 					},
 					"enableStaging": false
@@ -45,7 +47,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DayStatsDwMsi",
+						"referenceName": "DayStatsGen2",
 						"type": "DatasetReference"
 					}
 				]

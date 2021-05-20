@@ -39,7 +39,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DayStatsGen2",
+						"referenceName": "TripDataGen2",
 						"type": "DatasetReference"
 					}
 				],

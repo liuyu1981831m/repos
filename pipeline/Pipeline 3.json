@@ -5,7 +5,14 @@
 			{
 				"name": "Notebook1",
 				"type": "SynapseNotebook",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "ForEach1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
@@ -20,8 +27,43 @@
 						"type": "NotebookReference"
 					}
 				}
+			},
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.PipelinePara",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "Wait1",
+							"type": "Wait",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"waitTimeInSeconds": 1
+							}
+						}
+					]
+				}
 			}
 		],
+		"parameters": {
+			"PipelinePara": {
+				"type": "array",
+				"defaultValue": [
+					1,
+					2,
+					3,
+					4,
+					5
+				]
+			}
+		},
 		"annotations": [],
 		"lastPublishTime": "2021-03-31T06:40:00Z"
 	},

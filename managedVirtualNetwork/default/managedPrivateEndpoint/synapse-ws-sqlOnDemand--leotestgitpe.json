@@ -1,0 +1,10 @@
+{
+	"name": "synapse-ws-sqlOnDemand--leotestgitpe",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/d3bb3b2e-9a7e-4194-9960-5171bd192117/resourceGroups/leorg/providers/Microsoft.Synapse/workspaces/leotestgitpe",
+		"groupId": "sqlOnDemand",
+		"fqdns": [
+			"leotestgitpe-ondemand.10093ed5-8d02-40cb-96e9-e8461f85d0f0.sql.azuresynapse.net"
+		]
+	}
+}

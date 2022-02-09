@@ -1,0 +1,9 @@
+{
+	"name": "leoadfdepcanary3",
+	"location": "eastus2euap",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "20808c17-ba1d-444f-8707-fe5a67a17ef0",
+		"tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+	}
+}

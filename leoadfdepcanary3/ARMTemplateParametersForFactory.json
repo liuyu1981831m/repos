@@ -1,0 +1,112 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "leoadfdepcanary3"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureSynapseAnalytics1_connectionString": {
+			"value": ""
+		},
+		"CosmosDb1_connectionString": {
+			"value": ""
+		},
+		"leotestgitpe-WorkspaceDefaultSqlServer_connectionString": {
+			"value": ""
+		},
+		"scopewscus-WorkspaceDefaultSqlServer_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://leocanarytestgen2.dfs.core.windows.net"
+		},
+		"leotestgitpe-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://leotestgitpegen2.dfs.core.windows.net"
+		},
+		"scopewscus-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://scopeuserwestcentralus.dfs.core.windows.net"
+		},
+		"AzureBlobStorage1_properties_privateLinkResourceId": {
+			"value": "/subscriptions/d3bb3b2e-9a7e-4194-9960-5171bd192117/resourceGroups/testconnection/providers/Microsoft.Storage/storageAccounts/leoblob"
+		},
+		"AzureBlobStorage1_properties_groupId": {
+			"value": "blob"
+		},
+		"AzureBlobStorage2_properties_privateLinkResourceId": {
+			"value": "/subscriptions/d3bb3b2e-9a7e-4194-9960-5171bd192117/resourceGroups/LeoRGLock/providers/Microsoft.Storage/storageAccounts/leobloblock"
+		},
+		"AzureBlobStorage2_properties_groupId": {
+			"value": "blob"
+		},
+		"AzureBlobStorage4_properties_privateLinkResourceId": {
+			"value": "/subscriptions/76f6943c-c9e2-4915-bead-2a042561e8e0/resourceGroups/A365InternalRg-2670/providers/Microsoft.Storage/storageAccounts/0510khvcwqzak3ccbgmt8l4f"
+		},
+		"AzureBlobStorage4_properties_groupId": {
+			"value": "blob"
+		},
+		"AzureDataLakeStorage1_properties_privateLinkResourceId": {
+			"value": "/subscriptions/d3bb3b2e-9a7e-4194-9960-5171bd192117/resourceGroups/leorg/providers/Microsoft.Storage/storageAccounts/leocanarytestgen2"
+		},
+		"AzureDataLakeStorage1_properties_groupId": {
+			"value": "dfs"
+		},
+		"AzureDataLakeStorage1_properties_fqdns": {
+			"value": [
+				"leocanarytestgen2.dfs.core.windows.net"
+			]
+		},
+		"synapse-ws-custstgacct--leotestgitpe-leotestgitpegen2_properties_privateLinkResourceId": {
+			"value": "/subscriptions/d3bb3b2e-9a7e-4194-9960-5171bd192117/resourceGroups/leorg/providers/Microsoft.Storage/storageAccounts/leotestgitpegen2"
+		},
+		"synapse-ws-custstgacct--leotestgitpe-leotestgitpegen2_properties_groupId": {
+			"value": "dfs"
+		},
+		"synapse-ws-sql--leocanaryvnet_properties_privateLinkResourceId": {
+			"value": "/subscriptions/0ee78edb-a0ad-456c-a0a2-901bf542c102/resourceGroups/leorg/providers/Microsoft.Synapse/workspaces/leocanaryvnet"
+		},
+		"synapse-ws-sql--leocanaryvnet_properties_groupId": {
+			"value": "sql"
+		},
+		"synapse-ws-sql--leocanaryvnet_properties_fqdns": {
+			"value": [
+				"leocanaryvnet.sql.azuresynapse.net"
+			]
+		},
+		"synapse-ws-sql--leotestgitpe_properties_privateLinkResourceId": {
+			"value": "/subscriptions/d3bb3b2e-9a7e-4194-9960-5171bd192117/resourceGroups/leorg/providers/Microsoft.Synapse/workspaces/leotestgitpe"
+		},
+		"synapse-ws-sql--leotestgitpe_properties_groupId": {
+			"value": "sql"
+		},
+		"synapse-ws-sql--leotestgitpe_properties_fqdns": {
+			"value": [
+				"leotestgitpe.10093ed5-8d02-40cb-96e9-e8461f85d0f0.sql.azuresynapse.net"
+			]
+		},
+		"synapse-ws-sqlOnDemand--leocanaryvnet_properties_privateLinkResourceId": {
+			"value": "/subscriptions/0ee78edb-a0ad-456c-a0a2-901bf542c102/resourceGroups/leorg/providers/Microsoft.Synapse/workspaces/leocanaryvnet"
+		},
+		"synapse-ws-sqlOnDemand--leocanaryvnet_properties_groupId": {
+			"value": "sqlOnDemand"
+		},
+		"synapse-ws-sqlOnDemand--leocanaryvnet_properties_fqdns": {
+			"value": [
+				"leocanaryvnet-ondemand.sql.azuresynapse.net"
+			]
+		},
+		"synapse-ws-sqlOnDemand--leotestgitpe_properties_privateLinkResourceId": {
+			"value": "/subscriptions/d3bb3b2e-9a7e-4194-9960-5171bd192117/resourceGroups/leorg/providers/Microsoft.Synapse/workspaces/leotestgitpe"
+		},
+		"synapse-ws-sqlOnDemand--leotestgitpe_properties_groupId": {
+			"value": "sqlOnDemand"
+		},
+		"synapse-ws-sqlOnDemand--leotestgitpe_properties_fqdns": {
+			"value": [
+				"leotestgitpe-ondemand.10093ed5-8d02-40cb-96e9-e8461f85d0f0.sql.azuresynapse.net"
+			]
+		}
+	}
+}

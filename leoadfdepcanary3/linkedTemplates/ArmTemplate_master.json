@@ -1,0 +1,309 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "leoadfdepcanary3"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1'"
+		},
+		"AzureSynapseAnalytics1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSynapseAnalytics1'"
+		},
+		"CosmosDb1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'CosmosDb1'"
+		},
+		"leotestgitpe-WorkspaceDefaultSqlServer_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'leotestgitpe-WorkspaceDefaultSqlServer'"
+		},
+		"scopewscus-WorkspaceDefaultSqlServer_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'scopewscus-WorkspaceDefaultSqlServer'"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://leocanarytestgen2.dfs.core.windows.net"
+		},
+		"leotestgitpe-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://leotestgitpegen2.dfs.core.windows.net"
+		},
+		"scopewscus-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://scopeuserwestcentralus.dfs.core.windows.net"
+		},
+		"AzureBlobStorage1_properties_privateLinkResourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/d3bb3b2e-9a7e-4194-9960-5171bd192117/resourceGroups/testconnection/providers/Microsoft.Storage/storageAccounts/leoblob"
+		},
+		"AzureBlobStorage1_properties_groupId": {
+			"type": "string",
+			"defaultValue": "blob"
+		},
+		"AzureBlobStorage2_properties_privateLinkResourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/d3bb3b2e-9a7e-4194-9960-5171bd192117/resourceGroups/LeoRGLock/providers/Microsoft.Storage/storageAccounts/leobloblock"
+		},
+		"AzureBlobStorage2_properties_groupId": {
+			"type": "string",
+			"defaultValue": "blob"
+		},
+		"AzureBlobStorage4_properties_privateLinkResourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/76f6943c-c9e2-4915-bead-2a042561e8e0/resourceGroups/A365InternalRg-2670/providers/Microsoft.Storage/storageAccounts/0510khvcwqzak3ccbgmt8l4f"
+		},
+		"AzureBlobStorage4_properties_groupId": {
+			"type": "string",
+			"defaultValue": "blob"
+		},
+		"AzureDataLakeStorage1_properties_privateLinkResourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/d3bb3b2e-9a7e-4194-9960-5171bd192117/resourceGroups/leorg/providers/Microsoft.Storage/storageAccounts/leocanarytestgen2"
+		},
+		"AzureDataLakeStorage1_properties_groupId": {
+			"type": "string",
+			"defaultValue": "dfs"
+		},
+		"AzureDataLakeStorage1_properties_fqdns": {
+			"type": "array",
+			"defaultValue": [
+				"leocanarytestgen2.dfs.core.windows.net"
+			]
+		},
+		"synapse-ws-custstgacct--leotestgitpe-leotestgitpegen2_properties_privateLinkResourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/d3bb3b2e-9a7e-4194-9960-5171bd192117/resourceGroups/leorg/providers/Microsoft.Storage/storageAccounts/leotestgitpegen2"
+		},
+		"synapse-ws-custstgacct--leotestgitpe-leotestgitpegen2_properties_groupId": {
+			"type": "string",
+			"defaultValue": "dfs"
+		},
+		"synapse-ws-sql--leocanaryvnet_properties_privateLinkResourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/0ee78edb-a0ad-456c-a0a2-901bf542c102/resourceGroups/leorg/providers/Microsoft.Synapse/workspaces/leocanaryvnet"
+		},
+		"synapse-ws-sql--leocanaryvnet_properties_groupId": {
+			"type": "string",
+			"defaultValue": "sql"
+		},
+		"synapse-ws-sql--leocanaryvnet_properties_fqdns": {
+			"type": "array",
+			"defaultValue": [
+				"leocanaryvnet.sql.azuresynapse.net"
+			]
+		},
+		"synapse-ws-sql--leotestgitpe_properties_privateLinkResourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/d3bb3b2e-9a7e-4194-9960-5171bd192117/resourceGroups/leorg/providers/Microsoft.Synapse/workspaces/leotestgitpe"
+		},
+		"synapse-ws-sql--leotestgitpe_properties_groupId": {
+			"type": "string",
+			"defaultValue": "sql"
+		},
+		"synapse-ws-sql--leotestgitpe_properties_fqdns": {
+			"type": "array",
+			"defaultValue": [
+				"leotestgitpe.10093ed5-8d02-40cb-96e9-e8461f85d0f0.sql.azuresynapse.net"
+			]
+		},
+		"synapse-ws-sqlOnDemand--leocanaryvnet_properties_privateLinkResourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/0ee78edb-a0ad-456c-a0a2-901bf542c102/resourceGroups/leorg/providers/Microsoft.Synapse/workspaces/leocanaryvnet"
+		},
+		"synapse-ws-sqlOnDemand--leocanaryvnet_properties_groupId": {
+			"type": "string",
+			"defaultValue": "sqlOnDemand"
+		},
+		"synapse-ws-sqlOnDemand--leocanaryvnet_properties_fqdns": {
+			"type": "array",
+			"defaultValue": [
+				"leocanaryvnet-ondemand.sql.azuresynapse.net"
+			]
+		},
+		"synapse-ws-sqlOnDemand--leotestgitpe_properties_privateLinkResourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/d3bb3b2e-9a7e-4194-9960-5171bd192117/resourceGroups/leorg/providers/Microsoft.Synapse/workspaces/leotestgitpe"
+		},
+		"synapse-ws-sqlOnDemand--leotestgitpe_properties_groupId": {
+			"type": "string",
+			"defaultValue": "sqlOnDemand"
+		},
+		"synapse-ws-sqlOnDemand--leotestgitpe_properties_fqdns": {
+			"type": "array",
+			"defaultValue": [
+				"leotestgitpe-ondemand.10093ed5-8d02-40cb-96e9-e8461f85d0f0.sql.azuresynapse.net"
+			]
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "leoadfdepcanary3_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureDataLakeStorage1_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
+					},
+					"AzureSynapseAnalytics1_connectionString": {
+						"value": "[parameters('AzureSynapseAnalytics1_connectionString')]"
+					},
+					"CosmosDb1_connectionString": {
+						"value": "[parameters('CosmosDb1_connectionString')]"
+					},
+					"AzureBlobStorage1_properties_privateLinkResourceId": {
+						"value": "[parameters('AzureBlobStorage1_properties_privateLinkResourceId')]"
+					},
+					"AzureBlobStorage1_properties_groupId": {
+						"value": "[parameters('AzureBlobStorage1_properties_groupId')]"
+					},
+					"AzureBlobStorage2_properties_privateLinkResourceId": {
+						"value": "[parameters('AzureBlobStorage2_properties_privateLinkResourceId')]"
+					},
+					"AzureBlobStorage2_properties_groupId": {
+						"value": "[parameters('AzureBlobStorage2_properties_groupId')]"
+					},
+					"AzureBlobStorage4_properties_privateLinkResourceId": {
+						"value": "[parameters('AzureBlobStorage4_properties_privateLinkResourceId')]"
+					},
+					"AzureBlobStorage4_properties_groupId": {
+						"value": "[parameters('AzureBlobStorage4_properties_groupId')]"
+					},
+					"AzureDataLakeStorage1_properties_privateLinkResourceId": {
+						"value": "[parameters('AzureDataLakeStorage1_properties_privateLinkResourceId')]"
+					},
+					"AzureDataLakeStorage1_properties_groupId": {
+						"value": "[parameters('AzureDataLakeStorage1_properties_groupId')]"
+					},
+					"AzureDataLakeStorage1_properties_fqdns": {
+						"value": "[parameters('AzureDataLakeStorage1_properties_fqdns')]"
+					},
+					"synapse-ws-custstgacct--leotestgitpe-leotestgitpegen2_properties_privateLinkResourceId": {
+						"value": "[parameters('synapse-ws-custstgacct--leotestgitpe-leotestgitpegen2_properties_privateLinkResourceId')]"
+					},
+					"synapse-ws-custstgacct--leotestgitpe-leotestgitpegen2_properties_groupId": {
+						"value": "[parameters('synapse-ws-custstgacct--leotestgitpe-leotestgitpegen2_properties_groupId')]"
+					},
+					"synapse-ws-sql--leocanaryvnet_properties_privateLinkResourceId": {
+						"value": "[parameters('synapse-ws-sql--leocanaryvnet_properties_privateLinkResourceId')]"
+					},
+					"synapse-ws-sql--leocanaryvnet_properties_groupId": {
+						"value": "[parameters('synapse-ws-sql--leocanaryvnet_properties_groupId')]"
+					},
+					"synapse-ws-sql--leocanaryvnet_properties_fqdns": {
+						"value": "[parameters('synapse-ws-sql--leocanaryvnet_properties_fqdns')]"
+					},
+					"synapse-ws-sql--leotestgitpe_properties_privateLinkResourceId": {
+						"value": "[parameters('synapse-ws-sql--leotestgitpe_properties_privateLinkResourceId')]"
+					},
+					"synapse-ws-sql--leotestgitpe_properties_groupId": {
+						"value": "[parameters('synapse-ws-sql--leotestgitpe_properties_groupId')]"
+					},
+					"synapse-ws-sql--leotestgitpe_properties_fqdns": {
+						"value": "[parameters('synapse-ws-sql--leotestgitpe_properties_fqdns')]"
+					},
+					"synapse-ws-sqlOnDemand--leocanaryvnet_properties_privateLinkResourceId": {
+						"value": "[parameters('synapse-ws-sqlOnDemand--leocanaryvnet_properties_privateLinkResourceId')]"
+					},
+					"synapse-ws-sqlOnDemand--leocanaryvnet_properties_groupId": {
+						"value": "[parameters('synapse-ws-sqlOnDemand--leocanaryvnet_properties_groupId')]"
+					},
+					"synapse-ws-sqlOnDemand--leocanaryvnet_properties_fqdns": {
+						"value": "[parameters('synapse-ws-sqlOnDemand--leocanaryvnet_properties_fqdns')]"
+					},
+					"synapse-ws-sqlOnDemand--leotestgitpe_properties_privateLinkResourceId": {
+						"value": "[parameters('synapse-ws-sqlOnDemand--leotestgitpe_properties_privateLinkResourceId')]"
+					},
+					"synapse-ws-sqlOnDemand--leotestgitpe_properties_groupId": {
+						"value": "[parameters('synapse-ws-sqlOnDemand--leotestgitpe_properties_groupId')]"
+					},
+					"synapse-ws-sqlOnDemand--leotestgitpe_properties_fqdns": {
+						"value": "[parameters('synapse-ws-sqlOnDemand--leotestgitpe_properties_fqdns')]"
+					},
+					"AzureDataLakeStorage1_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "leoadfdepcanary3_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"leotestgitpe-WorkspaceDefaultSqlServer_connectionString": {
+						"value": "[parameters('leotestgitpe-WorkspaceDefaultSqlServer_connectionString')]"
+					},
+					"scopewscus-WorkspaceDefaultSqlServer_connectionString": {
+						"value": "[parameters('scopewscus-WorkspaceDefaultSqlServer_connectionString')]"
+					},
+					"leotestgitpe-WorkspaceDefaultStorage_properties_typeProperties_url": {
+						"value": "[parameters('leotestgitpe-WorkspaceDefaultStorage_properties_typeProperties_url')]"
+					},
+					"scopewscus-WorkspaceDefaultStorage_properties_typeProperties_url": {
+						"value": "[parameters('scopewscus-WorkspaceDefaultStorage_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'leoadfdepcanary3_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "leoadfdepcanary3_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'leoadfdepcanary3_ArmTemplate_1')]"
+			]
+		}
+	]
+}

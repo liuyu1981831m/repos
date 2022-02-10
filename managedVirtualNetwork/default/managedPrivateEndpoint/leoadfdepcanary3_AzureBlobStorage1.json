@@ -1,0 +1,7 @@
+{
+	"name": "leoadfdepcanary3_AzureBlobStorage1",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/76f6943c-c9e2-4915-bead-2a042561e8e0/resourceGroups/A365InternalRg-1887/providers/Microsoft.Storage/storageAccounts/11zw8ikfwipdgghb8o5kj2pz",
+		"groupId": "blob"
+	}
+}

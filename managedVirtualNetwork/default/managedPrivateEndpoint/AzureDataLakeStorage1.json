@@ -1,0 +1,9 @@
+{
+	"name": "AzureDataLakeStorage1",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/d3bb3b2e-9a7e-4194-9960-5171bd192117/resourceGroups/LeoRGLock/providers/Microsoft.Storage/storageAccounts/leobloblock",
+		"groupId": "dfs",
+		"ipAddress": null,
+		"resourceId": "/subscriptions/7e2c6818-ef44-4d8f-b0a5-8cdce9322ca6/resourceGroups/vnet-7e2c6818-eastus2euap-111-rg/providers/Microsoft.Network/privateEndpoints/leotestpenew.AzureDataLakeStorage1"
+	}
+}

@@ -1,0 +1,12 @@
+{
+	"name": "PrivateLinkService1",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/1e42591f-1f0c-4c5a-b7f2-a268f6105ec5/resourceGroups/leorg/providers/Microsoft.Network/privateLinkServices/leopls",
+		"groupId": "",
+		"fqdns": [
+			"b.c.d"
+		],
+		"ipAddress": "10.250.0.8",
+		"resourceId": "/subscriptions/7e2c6818-ef44-4d8f-b0a5-8cdce9322ca6/resourceGroups/vnet-7e2c6818-eastus2euap-111-rg/providers/Microsoft.Network/privateEndpoints/leotestpenew.PrivateLinkService1"
+	}
+}

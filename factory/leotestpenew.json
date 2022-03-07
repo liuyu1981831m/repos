@@ -1,0 +1,9 @@
+{
+	"name": "leotestpenew",
+	"location": "eastus2euap",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "23715aea-f54c-46f1-97ec-dba1efdd7203",
+		"tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+	}
+}

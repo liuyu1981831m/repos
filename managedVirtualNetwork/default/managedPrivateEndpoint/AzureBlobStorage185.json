@@ -1,0 +1,12 @@
+{
+	"name": "AzureBlobStorage185",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/d3bb3b2e-9a7e-4194-9960-5171bd192117/resourceGroups/leoBicep/providers/Microsoft.Storage/storageAccounts/leobicepgen2",
+		"groupId": "blob",
+		"fqdns": [
+			"leobicepgen2.blob.core.windows.net"
+		],
+		"ipAddress": "10.250.0.8",
+		"resourceId": "/subscriptions/5e575fe5-eec9-43e5-9e4d-077ccb71e25e/resourceGroups/vnet-5e575fe5-eastus2-57-rg/providers/Microsoft.Network/privateEndpoints/leoadfcustomervnet.AzureBlobStorage185"
+	}
+}

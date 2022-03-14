@@ -5,8 +5,6 @@
 		"groupId": "",
 		"fqdns": [
 			"b.c.d"
-		],
-		"ipAddress": "10.250.0.8",
-		"resourceId": "/subscriptions/7e2c6818-ef44-4d8f-b0a5-8cdce9322ca6/resourceGroups/vnet-7e2c6818-eastus2euap-111-rg/providers/Microsoft.Network/privateEndpoints/leotestpenew.PrivateLinkService1"
+		]
 	}
 }

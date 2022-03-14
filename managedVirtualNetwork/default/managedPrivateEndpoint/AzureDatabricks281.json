@@ -5,8 +5,6 @@
 		"groupId": "databricks_ui_api",
 		"fqdns": [
 			"adb-1717009706093890.10.azuredatabricks.net"
-		],
-		"ipAddress": "10.250.0.9",
-		"resourceId": "/subscriptions/7e2c6818-ef44-4d8f-b0a5-8cdce9322ca6/resourceGroups/vnet-7e2c6818-eastus2euap-111-rg/providers/Microsoft.Network/privateEndpoints/leotestpenew.AzureDatabricks281"
+		]
 	}
 }

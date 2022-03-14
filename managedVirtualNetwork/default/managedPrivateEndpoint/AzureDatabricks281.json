@@ -5,6 +5,7 @@
 		"groupId": "databricks_ui_api",
 		"fqdns": [
 			"adb-1717009706093890.10.azuredatabricks.net"
-		]
+		],
+        	"ipAddress": "10.250.0.9"
 	}
 }

@@ -1,0 +1,12 @@
+{
+	"name": "AzureDatabricks705",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/d3bb3b2e-9a7e-4194-9960-5171bd192117/resourceGroups/leorg/providers/Microsoft.Databricks/workspaces/leodatabricksvnetinject4",
+		"groupId": "databricks_ui_api",
+		"fqdns": [
+			"adb-4644114301826064.4.azuredatabricks.net"
+		],
+		"ipAddress": "10.250.0.10",
+		"resourceId": "/subscriptions/7e2c6818-ef44-4d8f-b0a5-8cdce9322ca6/resourceGroups/vnet-7e2c6818-eastus2euap-111-rg/providers/Microsoft.Network/privateEndpoints/leotestpenew.AzureDatabricks705"
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"name": "AzureBlobStorage194",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/d3bb3b2e-9a7e-4194-9960-5171bd192117/resourceGroups/leorg/providers/Microsoft.Storage/storageAccounts/leocusvnetgen2",
+		"groupId": "blob",
+		"ipAddress": null,
+		"resourceId": "/subscriptions/5e575fe5-eec9-43e5-9e4d-077ccb71e25e/resourceGroups/vnet-5e575fe5-eastus2-57-rg/providers/Microsoft.Network/privateEndpoints/leoadfcustomervnet.AzureBlobStorage194"
+	}
+}

@@ -1,0 +1,11 @@
+{
+	"name": "PrivateLinkService849",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/1e42591f-1f0c-4c5a-b7f2-a268f6105ec5/resourceGroups/leorg/providers/Microsoft.Network/privateLinkServices/leopls",
+		"groupId": "",
+		"fqdns": [
+			"a.b.c",
+			"b.d.c"
+		]
+	}
+}

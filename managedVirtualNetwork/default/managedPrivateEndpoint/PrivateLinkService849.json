@@ -5,7 +5,8 @@
 		"groupId": "",
 		"fqdns": [
 			"a.b.c",
-			"b.d.c"
+			"b.d.c",
+			"aa.aa.aa"
 		]
 	}
 }

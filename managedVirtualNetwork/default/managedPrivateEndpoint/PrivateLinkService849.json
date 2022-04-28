@@ -6,7 +6,8 @@
 		"fqdns": [
 			"a.b.c",
 			"b.d.c",
-			"aa.aa.aa"
+			"aa.aa.aa",
+			"x.y.z"
 		]
 	}
 }

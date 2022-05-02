@@ -1,0 +1,7 @@
+{
+	"name": "TestPEDisconnection",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/d3bb3b2e-9a7e-4194-9960-5171bd192117/resourceGroups/leorg/providers/Microsoft.Storage/storageAccounts/leotestpe",
+		"groupId": "dfs"
+	}
+}

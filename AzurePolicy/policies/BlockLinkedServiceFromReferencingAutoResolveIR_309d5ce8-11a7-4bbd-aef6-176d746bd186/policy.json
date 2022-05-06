@@ -1,0 +1,35 @@
+{
+ "properties": {
+  "displayName": "BlockLinkedServiceFromReferencingAutoResolveIR",
+  "policyType": "Custom",
+  "mode": "All",
+  "metadata": {
+   "category": "LeoMVNet",
+   "createdBy": "40055d03-3bb5-4b7e-a9e6-ba970ba57ebf",
+   "createdOn": "2022-04-14T00:18:05.803715Z",
+   "updatedBy": "40055d03-3bb5-4b7e-a9e6-ba970ba57ebf",
+   "updatedOn": "2022-05-06T01:25:52.5146849Z"
+  },
+  "parameters": {},
+  "policyRule": {
+   "if": {
+    "allOf": [
+     {
+      "field": "type",
+      "equals": "Microsoft.DataFactory/factories/linkedservices"
+     },
+     {
+      "field": "Microsoft.DataFactory/factories/linkedservices/connectVia",
+      "exists": "false"
+     }
+    ]
+   },
+   "then": {
+    "effect": "deny"
+   }
+  }
+ },
+ "id": "/subscriptions/d3bb3b2e-9a7e-4194-9960-5171bd192117/providers/Microsoft.Authorization/policyDefinitions/309d5ce8-11a7-4bbd-aef6-176d746bd186",
+ "type": "Microsoft.Authorization/policyDefinitions",
+ "name": "309d5ce8-11a7-4bbd-aef6-176d746bd186"
+}

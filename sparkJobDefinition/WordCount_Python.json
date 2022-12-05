@@ -1,0 +1,34 @@
+{
+	"name": "WordCount_Python",
+	"properties": {
+		"targetBigDataPool": {
+			"referenceName": "test",
+			"type": "BigDataPoolReference"
+		},
+		"requiredSparkVersion": "3.1",
+		"language": "python",
+		"scanFolder": false,
+		"jobProperties": {
+			"name": "WordCount_Python",
+			"file": "abfss://sparkdemo@leoblob.dfs.core.windows.net/python/wordcount/wordcount.py",
+			"conf": {
+				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.minExecutors": "1",
+				"spark.dynamicAllocation.maxExecutors": "2",
+				"spark.autotune.trackingId": "51668966-79f3-4f63-871e-233443352cda"
+			},
+			"args": [
+				"abfss://sparkdemo@leoblob.dfs.core.windows.net/python/wordcount/shakespeare.txt",
+				"abfss://sparkdemo@leoblob.dfs.core.windows.net/python/wordcount/result"
+			],
+			"jars": [],
+			"pyFiles": [],
+			"files": [],
+			"driverMemory": "56g",
+			"driverCores": 8,
+			"executorMemory": "56g",
+			"executorCores": 8,
+			"numExecutors": 2
+		}
+	}
+}

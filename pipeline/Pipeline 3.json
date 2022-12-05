@@ -4,7 +4,7 @@
 		"activities": [
 			{
 				"name": "Notebook 1",
-				"description": "ad",
+				"description": "addfs",
 				"type": "SynapseNotebook",
 				"dependsOn": [],
 				"policy": {

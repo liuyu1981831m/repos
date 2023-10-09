@@ -1,0 +1,11 @@
+{
+	"name": "AzureFunction1",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/d3bb3b2e-9a7e-4194-9960-5171bd192117/resourceGroups/leorg/providers/Microsoft.Web/sites/leofunctionapp1",
+		"groupId": "sites",
+		"fqdns": [
+			"leofunctionapp1.azurewebsites.net",
+			"leofunctionapp1.scm.azurewebsites.net"
+		]
+	}
+}

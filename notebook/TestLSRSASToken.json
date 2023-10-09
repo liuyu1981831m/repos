@@ -1,0 +1,84 @@
+{
+	"name": "TestLSRSASToken",
+	"properties": {
+		"nbformat": 4,
+		"nbformat_minor": 2,
+		"bigDataPool": {
+			"referenceName": "leo",
+			"type": "BigDataPoolReference"
+		},
+		"sessionProperties": {
+			"driverMemory": "56g",
+			"driverCores": 8,
+			"executorMemory": "56g",
+			"executorCores": 8,
+			"numExecutors": 2,
+			"runAsWorkspaceSystemIdentity": false,
+			"conf": {
+				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.minExecutors": "2",
+				"spark.dynamicAllocation.maxExecutors": "2",
+				"spark.autotune.trackingId": "590c9aaf-1eb6-4b5c-8190-47348e45939c"
+			}
+		},
+		"metadata": {
+			"saveOutput": true,
+			"synapse_widget": {
+				"version": "0.1"
+			},
+			"enableDebugMode": false,
+			"kernelspec": {
+				"name": "synapse_pyspark",
+				"display_name": "python"
+			},
+			"language_info": {
+				"name": "python"
+			},
+			"a365ComputeOptions": {
+				"id": "/subscriptions/d3bb3b2e-9a7e-4194-9960-5171bd192117/resourceGroups/leorg/providers/Microsoft.Synapse/workspaces/leocusvnet/bigDataPools/leo",
+				"name": "leo",
+				"type": "Spark",
+				"endpoint": "https://leocusvnet.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/leo",
+				"auth": {
+					"type": "AAD",
+					"authResource": "https://dev.azuresynapse.net",
+					"authHeader": null
+				},
+				"sparkVersion": "3.1",
+				"nodeCount": 10,
+				"cores": 8,
+				"memory": 56,
+				"extraHeader": null
+			},
+			"sessionKeepAliveTimeout": 30
+		},
+		"cells": [
+			{
+				"cell_type": "code",
+				"source": [
+					"import com.microsoft.azure.synapse.tokenlibrary.TokenLibraryLinkedService\r\n",
+					"import com.twitter.util.Await\r\n",
+					"import org.apache.spark.sql.SparkSession\r\n",
+					"import org.apache.spark.{SparkConf, SparkContext, TaskContext}\r\n",
+					"import org.apache.spark.tokenlibrary.SparkContextWrapper\r\n",
+					"import java.util.Date\r\n",
+					"val activeSession: Option[SparkSession] = SparkSession.getActiveSession\r\n",
+					"val sparkContext: Option[SparkContext] =\r\n",
+					"Option(activeSession.map(_.sparkContext)\r\n",
+					"    .getOrElse(SparkContextWrapper.getActiveSparkContext.getOrElse(null)))\r\n",
+					"val sparkConf: Option[SparkConf] = sparkContext.map(_.getConf)\r\n",
+					"val conf = sparkConf.get\r\n",
+					"val appId = conf.getAppId\r\n",
+					"val tokenLibraryLS = new TokenLibraryLinkedService()\r\n",
+					"val linkedStorage = \"AzureDataLakeStorage1\"\r\n",
+					"val resource = s\"\"\"{\"audience\": \"$linkedStorage\", \"name\": \"\"}\"\"\"\r\n",
+					"val sessionToken = spark.conf.get(\"spark.arcadia.session.token\")\r\n",
+					"val endpoint = Option(spark.conf.get(\"spark.tokenServiceEndpoint\"))\r\n",
+					"val token =  Await.result(tokenLibraryLS.getAccessTokenAsync(sessionToken, resource, appId, endpoint))\r\n",
+					"println(s\"SAS token: ${token.token}\")\r\n",
+					"println(s\"LSR returned expiry: ${new Date(token.expireTime.toLong * 1000)}\")"
+				]
+			}
+		]
+	}
+}

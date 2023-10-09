@@ -1,0 +1,10 @@
+{
+	"name": "synapse-ws-sql--leocusvnet",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/d3bb3b2e-9a7e-4194-9960-5171bd192117/resourceGroups/leorg/providers/Microsoft.Synapse/workspaces/leocusvnet",
+		"groupId": "sql",
+		"fqdns": [
+			"leocusvnet.bf9a1c0c-4280-4ca1-beea-e651ba7282b3.sql.azuresynapse.net"
+		]
+	}
+}
